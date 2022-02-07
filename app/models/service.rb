@@ -1,5 +1,5 @@
 class Service < ApplicationRecord
   validates :name, :website, :locale, presence: true
 
-  enum locale: [:en, :el]
+  enum locale: %i[en el]
 end

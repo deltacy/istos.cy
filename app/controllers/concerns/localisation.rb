@@ -23,4 +23,3 @@ module Localisation
     params[:locale]
   end
 end
-
