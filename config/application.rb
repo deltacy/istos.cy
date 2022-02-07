@@ -33,5 +33,8 @@ module Portal
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.i18n.available_locales = [:el, :en]
+    config.i18n.default_locale = :el
+
   end
 end
