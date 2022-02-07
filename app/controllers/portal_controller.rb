@@ -1,15 +1,7 @@
 class PortalController < ApplicationController
   def index
-    @popular_services = [Struct.new(:name).new('Popular service 1'),
-                         Struct.new(:name).new('Popular service 2'),
-                         Struct.new(:name).new('Popular service 3'),
-                         Struct.new(:name).new('Popular service 4'),
-                         Struct.new(:name).new('Popular service 5')]
+    @popular_services = Service.where(locale: I18n.locale).order(Arel.sql('RANDOM()')).limit(5)
 
-    @services = [Struct.new(:name, :description).new('Department of lands and surverys',
-                                                     'The home of HM Land Registry. Go here to register' \
-                                                     'the ownership of land and property in Cyprus.'),
-                 Struct.new(:name, :description).new('Coronavirus',
-                                                     'Coronavirus advice website.')]
+    @services = Service.where(locale: I18n.locale)
   end
 end
