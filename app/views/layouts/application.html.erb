@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portal</title>
+    <title>ISTOS.CY</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,400;1,500;1,900&display=swap" rel="stylesheet">
   </head>
-
   <body>
-    <%= yield %>
+
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container ">
+          <a href="#" class="navbar-brand">
+            <%= image_tag 'cyflag.png', class: 'd-inline-block', width:50, height: 45 %>
+            ISTOS.CY
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <%= yield %>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+        <a href="#"><%= t('back_to_top') %></a>
+        </p>
+        <p>A collaboration, making the internet a nicer place to be!</p>
+      </div>
+    </footer>
+
   </body>
 </html>

@@ -1,0 +1,37 @@
+a {
+  font-weight: 500;
+  text-underline-offset: .2rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+header {
+  border-bottom: 1px solid $secondary;
+}
+
+.most-popular {
+  @extend .list-unstyled;
+
+  li a {
+    line-height: 2.5rem;
+  }
+}
+
+.services-grid {
+  @extend .list-group-horizontal, .row, .row-cols-3;
+  margin-left: 0;
+  padding-left: 0;
+
+  .service-box {
+    @extend .list-group-item, .border-0;
+    padding: 10px 10px 10px 0px;
+
+    .wrapper {
+      border-top: 1px solid #b1b4b6;
+      padding: 15px 20px 10px 0;
+      position: relative;
+    }
+  }
+}
+
+
