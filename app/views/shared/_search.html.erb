@@ -1,0 +1,8 @@
+<h2><%= t('search') %></h2>
+
+<%= form_with url: searches_path, method: :get do |form| %>
+  <div class="input-group mb-9">
+    <%= form.search_field :search_term, value: @search_term, class: 'form-control form-control-lg' %>
+    <%= form.submit t('search'), class: 'btn btn-secondary' %>
+  </div>
+<% end =%>
