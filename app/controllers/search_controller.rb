@@ -1,10 +1,7 @@
 class SearchController < ApplicationController
   def index
-    puts I18n.locale
     @search_term = search_term
-    @services = Service.where(locale: I18n.locale)
-                       .and(Service.where('lower(name) like ?', "%#{search_term.downcase}%"))
-                       .or(Service.where('lower(description) like ?', "%#{search_term.downcase}%"))
+    @services = Service.locale(I18n.locale).results(search_term)
   end
 
   private
