@@ -5,4 +5,8 @@ Rails.application.routes.draw do
     resources :search, only: :index, as: :searches
     resources :services, only: :show
   end
+
+  namespace :support_interface, path: '/support' do
+    root 'services#index'
+  end
 end
