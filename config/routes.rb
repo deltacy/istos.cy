@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     root 'portal#index'
 
     resources :search, only: :index, as: :searches
+    resources :services, only: :show
   end
 end

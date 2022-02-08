@@ -8,4 +8,8 @@ class Service < ApplicationRecord
 
   enum locale: { en: 'English',
                  el: 'Greek' }
+
+  def to_param
+    slug
+  end
 end

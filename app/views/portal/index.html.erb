@@ -17,7 +17,7 @@
         <h2><%= t('popular') %></h2>
         <ul class="most-popular">
           <% @popular_services.each do |service| %>
-            <li><%= link_to service.name, '#' %> </li>
+            <li><%= link_to service.name, service %></li>
           <% end %>
         </ul>
       </div>
@@ -38,7 +38,7 @@
 
             <li class='service-box'>
               <div class="wrapper">
-                <h3><a href="#"><%= service.name %></a></h3>
+                <h3><%= link_to service.name, service %></h3>
                 <p><%= service.description %></p>
               </div>
             </li>
