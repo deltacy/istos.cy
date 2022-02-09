@@ -1,6 +1,8 @@
 en:
+  english: English
+  greek: Greek
   welcome: "Welcome to %{name}"
-  intro: The place to find all Cyprus based services and information.
+  intro: The place to find all Cyprus based web services and information.
   tagline: Simple, clear, fast.
 
   popular: Popular searches
@@ -8,3 +10,10 @@ en:
   services: Services
 
   back_to_top: Back to top
+
+  support_interface:
+    services:
+      update:
+        success: Service successfully updated
+
+  edit: Update

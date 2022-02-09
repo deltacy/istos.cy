@@ -1,0 +1,21 @@
+<%= simple_form_for @service_form, url: support_interface_service_path, method: :patch, wrapper: :vertical_form do |form| %>
+  <%= form.input :slug, disabled: true, readonly: true %>
+
+  <div class='py-4'>
+    <h2><%= I18n.t('english') %></h2>
+
+    <%= form.input :name_en %>
+    <%= form.input :description_en, as: :text%>
+    <%= form.input :website_en %>
+  </div>
+
+  <div class='py-4'>
+    <h2><%= I18n.t('greek') %></h2>
+
+    <%= form.input :name_el %>
+    <%= form.input :description_el, as: :text %>
+    <%= form.input :website_el %>
+  </div>
+
+  <%= form.submit I18n.t('edit') %>
+<% end %>
