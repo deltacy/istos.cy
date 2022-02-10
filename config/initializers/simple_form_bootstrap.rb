@@ -50,7 +50,6 @@ SimpleForm.setup do |config|
   #
   # vertical default_wrapper
   config.wrappers :vertical_form, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
-    b.use :html5
     b.use :placeholder
     b.optional :maxlength
     b.optional :minlength

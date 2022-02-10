@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     namespace :support_interface, path: '/support' do
       root 'services#index'
 
-      resources :services, only: %i[update edit]
+      resources :services, only: %i[new create update edit]
     end
   end
 end

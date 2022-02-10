@@ -13,7 +13,18 @@ en:
 
   support_interface:
     services:
+      create:
+        success: Service successfully created
       update:
         success: Service successfully updated
 
+  create: Create
   edit: Update
+
+  activemodel:
+    errors:
+      models:
+        service_form:
+          attributes:
+            slug:
+              unique: already in use

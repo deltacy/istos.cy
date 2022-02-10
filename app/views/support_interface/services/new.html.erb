@@ -1,0 +1,23 @@
+<%= simple_form_for @service_form, url: support_interface_services_path, method: :post, wrapper: :vertical_form do |form| %>
+  <%= form.error_notification %>
+
+  <%= form.input :slug %>
+
+  <div class='py-4'>
+    <h2><%= I18n.t('english') %></h2>
+
+    <%= form.input :name_en %>
+    <%= form.input :description_en, as: :text%>
+    <%= form.input :website_en %>
+  </div>
+
+  <div class='py-4'>
+    <h2><%= I18n.t('greek') %></h2>
+
+    <%= form.input :name_el %>
+    <%= form.input :description_el, as: :text %>
+    <%= form.input :website_el %>
+  </div>
+
+  <%= form.submit I18n.t('create') %>
+<% end %>
