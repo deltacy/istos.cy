@@ -1,0 +1,10 @@
+en:
+  simple_form:
+    labels:
+      service_form:
+        name_el: Name
+        name_en: Name
+        description_el: Description
+        description_en: Description
+        website_el: Website
+        website_en: Website

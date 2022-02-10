@@ -1,0 +1,10 @@
+el:
+  simple_form:
+    labels:
+      service_form:
+        name_el: Όνομα
+        name_en: Όνομα
+        description_el: Περιγραφή
+        description_en: Περιγραφή
+        website_el: Ιστοσελίδα
+        website_en: Ιστοσελίδα

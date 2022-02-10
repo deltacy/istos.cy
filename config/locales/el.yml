@@ -1,10 +1,30 @@
 el:
+  english: Αγγλικά
+  greek: Ελληνικά
   welcome: "Καλωσήρθατε στο %{name}"
   intro: Βρείτε όλες τις διαδικτυακές Κυπριακές σελίδες και πληροφορίες.
-  tagline: Απλά, σαφής, γρήγορα.
+  tagline: Απλά, κατανοητά, γρήγορα.
 
   popular: Δημοφιλείς αναζητήσεις
   search: Αναζήτηση
   services: Υπηρεσίες
 
   back_to_top: Επιστροφή στην αρχή
+
+  support_interface:
+    services:
+      create:
+        success: Η υπηρεσία δημιουργήθηκε με επιτυχία
+      update:
+        success: Η υπηρεσία έχει τροποποιηθεί πετυχημένα
+
+  create: Δημιουργία
+  edit: Τροποποίηση
+
+  activemodel:
+    errors:
+      models:
+        service_form:
+          attributes:
+            slug:
+              unique: ήδη σε χρήση

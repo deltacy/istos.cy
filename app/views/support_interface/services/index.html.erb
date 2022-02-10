@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <%= link_to t('new_service'), new_support_interface_service_path, class: 'btn btn-primary float-right' %>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">slug</th>
+            <th scope="col">Name</th>
+            <th scope="col">Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @services.each do |service| %>
+            <tr>
+              <th scope="row"><%= service.slug %></th>
+              <td><%= service.name %></td>
+              <td><%= service.website %></td>
+              <td><%= link_to 'Edit', edit_support_interface_service_path(service) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
