@@ -7,6 +7,7 @@
     <%= form.input :name_en %>
     <%= form.input :description_en, as: :text%>
     <%= form.input :website_en %>
+    <%= form.input :information_en, as: :text %>
   </div>
 
   <div class='py-4'>
@@ -15,6 +16,7 @@
     <%= form.input :name_el %>
     <%= form.input :description_el, as: :text %>
     <%= form.input :website_el %>
+    <%= form.input :information_el, as: :text %>
   </div>
 
   <%= form.submit I18n.t('edit') %>

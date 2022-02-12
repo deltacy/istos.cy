@@ -32,11 +32,11 @@ module SupportInterface
 
       if @service_form.valid?
         @service_form.update!
+
+        redirect_to support_interface_root_path, notice: t('.success')
       else
         render :edit, status: :unprocessable_entity
       end
-
-      redirect_to support_interface_root_path, notice: t('.success')
     end
 
     private
@@ -54,7 +54,7 @@ module SupportInterface
     end
 
     def allowed_form_params
-      %i[name_en description_en website_en name_el description_el website_el]
+      %i[name_en description_en website_en information_en name_el description_el website_el information_el]
     end
   end
 end

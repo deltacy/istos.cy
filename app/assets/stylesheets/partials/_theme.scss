@@ -3,10 +3,14 @@ a {
   text-underline-offset: .2rem;
 }
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow { box-shadow: 0 1rem .75rem rgba(0, 0, 0, .05); }
+
+main {
+  min-height: 75vh;
+}
 
 header {
-  border-bottom: 1px solid $secondary;
+  border-bottom: 2px solid $secondary;
 }
 
 .most-popular {
@@ -33,5 +37,3 @@ header {
     }
   }
 }
-
-

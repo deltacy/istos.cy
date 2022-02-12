@@ -19,6 +19,8 @@ en:
       update:
         success: Service successfully updated
 
+  to_to_service: 'Go to service'
+
   create: Create
   edit: Update
 

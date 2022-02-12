@@ -13,12 +13,12 @@
   <body>
 
     <header>
-      <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="navbar navbar-light bg-white box-shadow">
         <div class="container ">
           <%=link_to root_path, class: "navbar-brand" do %>
-            <%= image_tag 'cyflag.png', class: 'd-inline-block', width:50, height: 45 %>
+            <%= image_tag 'webg.png', class: 'd-inline-block', width:60, height: 60 %>
             ISTOS.CY
-          <% end %>>
+          <% end %>
         </div>
       </div>
     </header>
@@ -27,8 +27,8 @@
       <%= yield %>
     </main>
 
-    <footer class="text-muted">
-      <div class="container">
+    <footer class="text-muted bg-light">
+      <div class="container py-4">
         <p class="float-right">
         <a href="#"><%= t('back_to_top') %></a>
         </p>
