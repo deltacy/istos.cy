@@ -1,2 +1,17 @@
-<%= @service.information %>
-<li><%= link_to @service.name, service_path(@service, redirect: true) %></li>
+<div class="py-4">
+  <div class="py-4 bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1><%= @service.name %></h1>
+          <p class="py-2">
+            <%= markdown(@service.information) %>
+          </p>
+          <div class='py-4'>
+            <%= link_to t('go_to_service'), service_path(@service, redirect: true), class: 'btn btn-lg btn-success' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
