@@ -67,6 +67,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     ast (2.4.2)
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.10.3)
       msgpack (~> 1.2)
@@ -90,6 +91,7 @@ GEM
       i18n (>= 1.6, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hashie (5.0.0)
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     io-console (0.5.11)
@@ -131,6 +133,13 @@ GEM
     nokogiri (1.13.1)
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
+    omniauth (2.0.4)
+      hashie (>= 3.4.6)
+      rack (>= 1.6.2, < 3)
+      rack-protection
+    omniauth-identity (3.0.9)
+      bcrypt
+      omniauth
     parallel (1.21.0)
     parser (3.1.0.0)
       ast (~> 2.4.1)
@@ -139,6 +148,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (7.0.1)
@@ -253,6 +264,7 @@ DEPENDENCIES
   faker
   jbuilder
   jsbundling-rails
+  omniauth-identity
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.1)

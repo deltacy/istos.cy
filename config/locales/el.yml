@@ -12,12 +12,20 @@ el:
 
   back_to_top: Επιστροφή στην αρχή
 
+  login: Σύνδεση
+
   support_interface:
     services:
       create:
         success: Η υπηρεσία δημιουργήθηκε με επιτυχία
       update:
         success: Η υπηρεσία έχει τροποποιηθεί πετυχημένα
+    sessions:
+      create:
+        success: Επιτυχημένη σύνδεση
+        activation_required: Επικοινωνήστε μαζί μας για ενεργοποίηση του λογαριασμού σας
+      destroy:
+        success: Έχετε αποσυνδεθεί
 
   go_to_service: 'Προχωρήστε στην υπηρεσία'
 
