@@ -10,7 +10,7 @@ class ServicesController < ApplicationController
   private
 
   def service_id
-    params.permit(:id)[:id]
+    params.permit(:locale, :id)[:id]
   end
 
   def show_information_page?(service)

@@ -7,6 +7,6 @@ class SearchController < ApplicationController
   private
 
   def search_term
-    params.permit(:search_term)[:search_term]
+    params.permit(:locale, :search_term)[:search_term]
   end
 end
