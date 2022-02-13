@@ -1,0 +1,33 @@
+<% if @service&.persisted? %>
+  <meta name="title" content="ISTOS.CY - <%= @service.name %>"/>
+  <meta name="description" content="<%= @service.description %>"/>
+  <meta name="keywords" content="" />
+
+  <meta property="og:title" content="ISTOS.CY - <%= @service.name %>"/>
+  <meta property="og:description" content="<%= @service.description %>"/>
+  <meta property="og:image" content="<%= image_url("webg.png") %>" />
+  <meta property="og:url" content="<%= service_url %>" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ISTOS.CY - <%= @service.name %>" />
+  <meta name="twitter:description" content="<%= @service.description %>"/>
+  <meta name="twitter:image" content="<%= image_url("webg.png") %>" />
+  <meta name="twitter:site" content="<%= service_url %>" />
+<% else %>
+  <meta name="title" content="<%= I18n.t('welcome', name: 'ISTOS.CY') %>" />
+  <meta name="description" content="<%= t('intro') %>"/>
+  <meta name="keywords" content="<%= t('tagline') %>" />
+
+  <meta property="og:title" content="<%= I18n.t('welcome', name: 'ISTOS.CY') %>" />
+  <meta property="og:description" content="<%= t('intro') %>"/>
+  <meta property="og:image" content="<%= image_url("webg.png") %>" />
+  <meta property="og:url" content="<%= root_url %>" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="<%= I18n.t('welcome', name: 'ISTOS.CY') %>" />
+  <meta name="twitter:description" content="<%= t('intro') %>"/>
+  <meta name="twitter:image" content="<%= image_url("webg.png") %>" />
+  <meta name="twitter:site" content="<%= root_url %>" />
+<% end %>
