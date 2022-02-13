@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_10_215814) do
+ActiveRecord::Schema.define(version: 2022_02_13_021516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "identities", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "services", force: :cascade do |t|
     t.string "name", null: false
@@ -25,6 +33,16 @@ ActiveRecord::Schema.define(version: 2022_02_10_215814) do
     t.string "slug"
     t.text "information"
     t.index ["slug", "locale"], name: "index_services_on_slug_and_locale", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "uid"
+    t.string "provider"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "user_type"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
