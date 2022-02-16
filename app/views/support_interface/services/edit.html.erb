@@ -19,5 +19,7 @@
     <%= form.input :information_el, as: :text %>
   </div>
 
+  <%= form.input :topic, as: :select, collection: available_topics, value_method: :slug, selected: @service_form.topic, include_blank: true  %>
+
   <%= form.submit I18n.t('edit') %>
 <% end %>

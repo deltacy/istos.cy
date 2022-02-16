@@ -10,6 +10,7 @@
             <th scope="col">slug</th>
             <th scope="col">Name</th>
             <th scope="col">Website</th>
+            <th scope="col">Topic</th>
           </tr>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@
               <th scope="row"><%= service.slug %></th>
               <td><%= service.name %></td>
               <td><%= service.website %></td>
+              <td><%= service.topic&.name %></td>
               <td><%= link_to 'Edit', edit_support_interface_service_path(service) %></td>
             </tr>
           <% end %>

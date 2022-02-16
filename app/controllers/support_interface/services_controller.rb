@@ -23,6 +23,7 @@ module SupportInterface
       service_en = Service.locale('en').find_by(slug: service_slug)
       service_el = Service.locale('el').find_by(slug: service_slug)
       @service_form = ServiceForm.load_data(slug: service_slug,
+                                            topic: service_en&.topic&.slug,
                                             service_en: service_en,
                                             service_el: service_el)
     end
@@ -54,7 +55,13 @@ module SupportInterface
     end
 
     def allowed_form_params
-      %i[name_en description_en website_en information_en name_el description_el website_el information_el]
+      %i[name_en description_en website_en information_en name_el description_el website_el information_el topic]
+    end
+
+    helper_method :available_topics
+
+    def available_topics
+      Topic.locale(I18n.locale).subtopics
     end
   end
 end

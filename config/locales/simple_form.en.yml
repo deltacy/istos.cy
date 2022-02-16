@@ -10,3 +10,8 @@ en:
         website_en: Website
         information_el: Information
         information_en: Information
+      topic_form:
+        name_el: Name
+        name_en: Name
+        description_el: Description
+        description_en: Description

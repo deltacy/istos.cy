@@ -10,3 +10,8 @@ el:
         website_en: Ιστοσελίδα
         information_el: Πληροφορίες
         information_en: Πληροφορίες
+      topic_form:
+        name_el: Όνομα
+        name_en: Όνομα
+        description_el: Περιγραφή
+        description_en: Περιγραφή
