@@ -34,6 +34,8 @@ en:
 
   activemodel:
     errors:
+      messages:
+        unique: already in use
       models:
         service_form:
           attributes:

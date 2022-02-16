@@ -1,4 +1,7 @@
 class Service < ApplicationRecord
+  has_one :service_topic
+  has_one :topic, through: :service_topic
+
   validates :name, :website, :locale, presence: true
 
   scope :locale, ->(locale) { where(locale: locale) }

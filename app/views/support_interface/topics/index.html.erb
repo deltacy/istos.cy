@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <%= link_to t('new_topic'), new_support_interface_topic_path, class: 'btn btn-primary float-right' %>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">slug</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Subtopics</th>
+            <th scope="col">Services</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @topics.each do |topic| %>
+            <tr>
+              <th scope="row"><%= topic.slug %></th>
+              <td><%= topic.name %></td>
+              <td><%= topic.description %></td>
+              <td><%= topic.topics.map(&:name).join(', ') %></td>
+              <td><%= topic.services.map(&:name) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

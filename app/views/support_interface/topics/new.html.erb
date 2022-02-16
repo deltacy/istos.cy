@@ -1,0 +1,21 @@
+<%= simple_form_for [:support_interface, @topic_form], url: support_interface_topics_path do |form| %>
+  <%= form.error_notification %>
+
+  <%= form.input :slug %>
+
+  <div class='py-4'>
+    <h2><%= I18n.t('english') %></h2>
+    <%= form.input :name_en %>
+    <%= form.input :description_en, as: :text %>
+  </div>
+
+  <div class='py-4'>
+    <h2><%= I18n.t('greek') %></h2>
+
+    <%= form.input :name_el %>
+    <%= form.input :description_el, as: :text %>
+  </div>
+
+  <%= form.input :topic, as: :select, collection: available_topics, value_method: :slug %>
+  <%= form.submit I18n.t('create') %>
+<% end %>
