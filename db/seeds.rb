@@ -7,49 +7,130 @@
 #   Character.create(name: "Luke", movie: movies.first)
 #
 # Topics
+#
+topic_data = {
+  benefits: {
+    el: { name: 'Επιδόματα', description: 'Επιδόματα και οικονομική υποστήριξη' },
+    en: { name: 'Benefits', description: 'Benefits and financial support' }
+  },
+  'births-deaths-marriage': {
+    el: { name: 'Γεννήσεις, θανάτοι και γάμοι', description: 'Some description' },
+    en: { name: 'Births, deaths and weddings', description: 'Some description' }
+  },
+  business: {
+    el: { name: 'Επιχειρήσεις και αυτοεργοδοτούμενα άτομα', description: 'Εργαλία και καθοδήγηση για επιχειρήσεις' },
+    en: { name: 'Businesses and self-employed', description: 'Tools for businesses' }
+  },
+  childcare: {
+    el: { name: 'Παιδική μέριμνα και φροντίδα', description: 'description' },
+    en: { name: 'Childcare', description: 'description' }
+  },
+  government: {
+    el: { name: 'Κυπριακή υπηκοότητα και ζωή στην Κύπρο', description: 'Πληροφορίες για την ζωή στην Κύπρο' },
+    en: { name: 'Cypriot citizenship and life in Cyprus', description: 'Information about Cyprus' }
+  },
+  justice: {
+    el: { name: 'Δικαοσύνη και νομοθεσία', description: 'Νομοθεσία και δικαιοσύνη' },
+    en: { name: 'Justice and law', description: 'justice and law' }
+  },
+  disabled: {
+    el: { name: 'Άτομα με αναπηρίες', description: 'Περιλαμβάνει δικαιώματα, επιδόματα, φροντίδα' },
+    en: { name: 'People with disabilities', description: 'Includes rights of disabled people' }
+  },
+  education: {
+    el: { name: 'Εκπαίδευση και μάθηση', description: 'Χορηγίες, υποτροφίες, πιστοποιήσεις' },
+    en: { name: 'Learning and education', description: 'Grants etc' }
+  },
+  transport: {
+    el: { name: 'Οδήγηση και μεταφορά', description: 'Περιλαμβάνει άδεια κυκλοφορίας, MOT, άδεια οδήγησης' },
+    en: { name: 'Driving and transport', description: 'Includes driving licence, MOT etc' }
+  },
+  employment: {
+    el: { name: 'Εργοδότηση', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' },
+    en: { name: 'Employment', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' }
+  },
+  environment: {
+    el: { name: 'Περιβάλλον ', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' },
+    en: { name: 'Environment ', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' }
+  },
+  'housing-local-services': {
+    el: { name: 'Κατοικία και ενοικίαση', description: 'Υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών' },
+    en: { name: 'Hosing and rentals', description: 'Υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών' }
+  },
+  'money-and-tax': {
+    el: { name: 'Εισόδημα και φορολογία', description: 'Περιλαμβάνει φορολογία, κοινωνικές ασφαλίσεις, χρέη' },
+    en: { name: 'Income and taxation', description: 'Περιλαμβάνει φορολογία, κοινωνικές ασφαλίσεις, χρέη' }
+  }
+}
 
-benefits_el = Topic.create(locale: 'el', slug: 'benefits', name: 'Επιδόματα', description: 'Επιδόματα και οικονομική υποστήριξη')
-benefits_en = Topic.create(locale: 'en', slug: 'benefits', name: 'Benefits', description: 'Benefits and financial support')
+topic_data.each_pair.map do |slug, data|
+  data.each_pair do |locale, details|
+    Topic.create!(locale: locale, slug: slug, name: details[:name], description: details[:description])
+  end
+end
 
-birthsanddeaths_el = Topic.create(locale: 'el', slug: 'births-deaths-marriage', name: 'Γεννήσεις, θανάτοι και γάμοι', description: 'Some description')
-birthsanddeaths_en = Topic.create(locale: 'en', slug: 'births-deaths-marriage', name: 'Births, deaths and weddings', description: 'Some description')
+subtopic_data = {
+  transport: {
+    'driving-licence': {
+      el: { name: 'Άδεια οδήγησης', description: 'Πολλες πληροφορίες' },
+      en: { name: 'Driving licence', description: 'Information related to driving licence' }
+    }
+  }
+}
 
-business_el = Topic.create(locale: 'el', slug: 'business', name: 'Επιχειρήσεις και αυτοεργοδοτούμενα άτομα', description: 'Εργαλία και καθοδήγηση για επιχειρήσεις')
-business_en = Topic.create(locale: 'en', slug: 'business', name: 'Businesses and self-employed', description: 'Tools for businesses')
+subtopic_data.each_pair.map do |topic_slug, data|
+  data.each_pair do |slug, values|
+    values.each_pair do |locale, details|
+      topic = Topic.find_by(slug: topic_slug, locale: locale)
+      Topic.create!(locale: locale, slug: slug, name: details[:name], description: details[:description], topic: topic)
+    end
+  end
+end
 
-childcare_el = Topic.create(locale: 'el', slug: 'childcare', name: 'Παιδική μέριμνα και φροντίδα', description: 'description')
-childcare_en = Topic.create(locale: 'en', slug: 'childcare', name: 'Childcare', description: 'description')
+service_data = {
+  road_tax: {
+    el: {
+      name: 'Ανανέωση άδειας κυκλοφορίας',
+      description: 'Ανανεώστε την άδειας κυκλοφορίας του οχήματος σας.',
+      website: 'https://www.jccsmart.com/change-culture/el?returnUrl=%2Froad-transport-department%2F4888160%2F',
+      information: 'Μεταβείτε στην ιστοσελίδα ηλεκτρονικών πληρωμών του Τμήματος Οδικών Μεταφορών και ανανεώστε την ' \
+                   'άδεια κυκλοφορίας σας χρησιμοποιώντας την πιστωτική σας κάρτα.',
+      topics: ['driving-licence']
+    },
+    en: {
+      name: 'Road tax renewal',
+      description: 'Tax your vehicle.',
+      website: 'https://www.jccsmart.com/change-culture/en-GB?returnUrl=%2Froad-transport-department%2F4888160%2F',
+      information: "Visit the Road Transport Department's payment website and renew your Road Tax Licence using a " \
+                   ' credit card.',
+      topics: ['driving-licence']
+    }
+  },
+  'licence-renewal': {
+    el: {
+      name: 'Ανανέωση άδειας οδήγησης',
+      description: 'Ανανεώστε την άδειας οδήγησης σας ή εκδώστε καινούρια σε περίπτωση κλοπής ή αλλίωσης.',
+      website: 'http://www.mcw.gov.cy/mcw/RTD/rtd.nsf/All/9FE19D004055E3DDC22578240034D9B3?OpenDocument',
+      information: 'Μεταβείτε στην ιστοσελίδα του Τμήματος Οδικών Μεταφορών όπου μπορείτε να βρείτε τα απαραίτητα ' \
+                   'έντυπα που χρειάζεται να συμπληρώσετε για να πεανεκδόσετε την άδειας οδήγησης σας.',
+      topics: ['driving-licence']
+    },
+    en: {
+      name: 'Driving licence renewal',
+      description: 'Renew your driving licence or issue a new one in case of theft or damanage.',
+      website: 'http://www.mcw.gov.cy/mcw/RTD/rtd.nsf/All/9FE19D004055E3DDC22578240034D9B3?OpenDocument',
+      information: "Visit the Road Transport Department's website where you can find the relevant documents that you " \
+                   'need to submit in order to re-issue your driving licence.',
+      topics: ['driving-licence']
+    }
+  }
+}
 
-citizenship_el = Topic.create(locale: 'el', slug: 'government', name: 'Κυπριακή υπηκοότητα και ζωή στην Κύπρο', description: 'Πληροφορίες για την ζωή στην Κύπρο')
-citizenship_en = Topic.create(locale: 'en', slug: 'government', name: 'Cypriot citizenship and life in Cyprus', description: 'Information about Cyprus')
-
-crime_el = Topic.create(locale: 'el', slug: 'justice', name: 'Δικαοσύνης και νομοθεσία', description: 'Νομοθεσία και δικαιοσύνη')
-crime_en = Topic.create(locale: 'en', slug: 'justice', name: 'Justice and law', description: 'justice and law')
-
-disabled_el = Topic.create(locale: 'el', slug: 'disabled', name: 'Άτομα με αναπηρίες', description: 'Περιλαμβάνει δικαιώματα, επιδόματα, φροντίδα')
-disabled_en = Topic.create(locale: 'en', slug: 'disabled', name: 'People with disabilities', description: 'Includes rights of disabled people')
-
-education_el = Topic.create(locale: 'el', slug: 'education', name: 'Εκπαίδευση και μάθηση',  description: 'Χορηγίες, υποτροφίες, πιστοποιήσεις')
-education_en = Topic.create(locale: 'en', slug: 'education', name: 'Learning and education',  description: 'Grants etc')
-
-transport_el = Topic.create(locale: 'el', slug: 'transport', name: 'Οδήγηση και μεταφορά', description: 'Περιλαμβάνει άδεια κυκλοφορίας, MOT, άδεια οδήγησης')
-transport_en = Topic.create(locale: 'en', slug: 'transport', name: 'Driving and transport', description: 'Includes driving licence, MOT etc')
-
-employment_el = Topic.create(locale: 'el', slug: 'employment', name: 'Εργοδότηση', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις')
-employment_en = Topic.create(locale: 'en', slug: 'employment', name: 'Employment', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις')
-
-environment_el = Topic.create(locale: 'el', slug: 'environment', name: 'Περιβάλλον ', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις')
-environment_en = Topic.create(locale: 'en', slug: 'environment', name: 'Environment ', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις')
-
-housing_el = Topic.create(locale: 'el', slug: 'housing-local-services', name: 'Κατοικία και ενοικίαση', description: 'Υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών')
-housing_en = Topic.create(locale: 'en', slug: 'housing-local-services', name: 'Hosing and rentals', description: 'Υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών')
-
-money_and_tax_el = Topic.create(locale: 'el', slug: 'money-and-tax', name: 'Εισόδημα και φορολογία', description: 'Περιλαμβάνει φορολογία, κοινωνικές ασφαλίσεις, χρέη')
-money_and_tax_en = Topic.create(locale: 'en', slug: 'money-and-tax', name: 'Income and taxation', description: 'Περιλαμβάνει φορολογία, κοινωνικές ασφαλίσεις, χρέη')
-
-subtopic_driving_licence_el = Topic.create(locale: 'el', slug: 'driving-licence', name: 'Άδεια οδήγησης', description: 'Πολλες πληροφορίες', topic: transport_el)
-subtopic_driving_licence_en = Topic.create(locale: 'en', slug: 'driving-licence', name: 'Driving licence', description: 'Information related to driving licence', topic: transport_en)
-
-service_renew_driving_licence_el_2 = Service.create!(locale: 'el', slug: 'road-tax', name: 'Ανανέωση άδειας κυκλοφορίας', description: 'Ανανεώστε την άδειας κυκλοφορίας του οχήματος σας.', website: 'https://www.jccsmart.com/change-culture/el?returnUrl=%2Froad-transport-department%2F4888160%2F', information: 'Μεταβείτε στην ιστοσελίδα ηλεκτρονικών πληρωμών του Τμήματος Οδικών Μεταφορών και ανανεώστε την άδεια κυκλοφορίας σας χρησιμοποιόντας την πιστωτική σας κάρτα.', topic: subtopic_driving_licence_el)
-
-service_renew_driving_licence_en = Service.create!(locale: 'en', slug: 'road-tax', name: 'Road tax renewal', description: 'Tax your vehicle.', website: 'https://www.jccsmart.com/change-culture/en-GB?returnUrl=%2Froad-transport-department%2F4888160%2F', information: "Visit the Road Transport Department's payment website and renew your Road Tax Licence using a credit card.", topic: subtopic_driving_licence_en)
+service_data.each_pair do |slug, data|
+  data.each_pair do |locale, details|
+    topic_slugs = details[:topics]
+    topics = topic_slugs.map { |topic_slug| Topic.find_by(slug: topic_slug, locale: locale) }
+    Service.create!(locale: locale, slug: slug, name: details[:name], description: details[:description],
+                    website: details[:website], information: details[:information], topic: topics.first)
+  end
+end
