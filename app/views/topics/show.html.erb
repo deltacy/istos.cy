@@ -1,0 +1,58 @@
+<% add_parent_breadcrumb_link 'Home', root_path %>
+<% if @parent_topic %>
+  <% add_parent_breadcrumb_link @parent_topic.name, topic_path(@parent_topic) %>
+<% end %>
+
+<% content_for :title, @topic.name %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <% if @topic.topics.any? %>
+        <h1><%= @topic.name %></h1>
+        <p class="lead py-2">
+        <%= @topic.description %>
+        </p>
+
+        <div class='py-4'>
+          <ul class='list-unstyled'>
+            <% @topic.topics.each do |subtopic| %>
+              <li> <%= link_to subtopic.name, topic_subtopic_path(@topic, subtopic) %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <% if @topic.services.any? %>
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-group">
+              <% @parent_topic.topics.each do |topic| %>
+                <% if topic.eql?(@topic) %>
+                  <%= link_to topic.name, topic_path(topic), class: "list-group-item list-group-item-action active" %>
+                <% else %>
+                  <%= link_to topic.name, topic_path(topic), class: "list-group-item list-group-item-action" %>
+                <% end %>
+              <% end %>
+            </ul>
+          </div>
+
+          <div class="col-md-8">
+            <h1><%= @topic.name %></h1>
+            <p class="lead py-2">
+            <%= @topic.description %>
+            </p>
+            <% @topic.services.each do |service| %>
+              <ul class='list-unstyled'>
+                <li>
+                  <%= link_to service.name, service_path(service) %>
+                </li>
+              </ul>
+            <% end %>
+          </div:>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,7 @@ class Topic < ApplicationRecord
 
   validates :locale, :name, :description, presence: true
 
-  def param
+  def to_param
     slug
   end
 end
