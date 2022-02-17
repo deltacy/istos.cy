@@ -1,6 +1,18 @@
+::selection {
+  background: #fd0; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #fd0; /* WebKit/Blink Browsers */
+}
+
 a {
   font-weight: 500;
   text-underline-offset: .2rem;
+
+  &:hover {
+    text-decoration-thickness:  max(3px,.1875rem,.12em);
+    text-decoration-skip-ink: none;
+  }
 }
 
 .box-shadow { box-shadow: 0 1rem .75rem rgba(0, 0, 0, .05); }
@@ -13,11 +25,17 @@ header {
   border-bottom: 2px solid $secondary;
 }
 
+ul.list-unstyled {
+  li {
+    @extend .mb-2;
+  }
+}
+
 .most-popular {
   @extend .list-unstyled;
 
   li a {
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 }
 

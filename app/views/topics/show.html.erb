@@ -14,19 +14,17 @@
         <%= @topic.description %>
         </p>
 
-        <div class='py-4'>
-          <ul class='list-unstyled'>
-            <% @topic.topics.each do |subtopic| %>
-              <li> <%= link_to subtopic.name, topic_subtopic_path(@topic, subtopic) %></li>
-            <% end %>
-          </ul>
-        </div>
+        <ul class='list-unstyled'>
+          <% @topic.topics.each do |subtopic| %>
+            <li> <%= link_to subtopic.name, topic_subtopic_path(@topic, subtopic) %></li>
+          <% end %>
+        </ul>
       <% end %>
 
       <% if @topic.services.any? %>
         <div class="row">
           <div class="col-md-4">
-            <ul class="list-group">
+            <ul class="list-group d-none d-sm-block mb-4">
               <% @parent_topic.topics.each do |topic| %>
                 <% if topic.eql?(@topic) %>
                   <%= link_to topic.name, topic_path(topic), class: "list-group-item list-group-item-action active" %>
@@ -42,15 +40,14 @@
             <p class="lead py-2">
             <%= @topic.description %>
             </p>
-            <% @topic.services.each do |service| %>
-              <ul class='list-unstyled'>
+            <ul class='list-unstyled'>
+              <% @topic.services.each do |service| %>
                 <li>
                   <%= link_to service.name, service_path(service) %>
                 </li>
-              </ul>
-            <% end %>
-          </div:>
-
+              <% end %>
+            </ul>
+          </div>
         </div>
       <% end %>
     </div>
