@@ -22,7 +22,13 @@ header {
 }
 
 .services-grid {
-  @extend .list-group-horizontal, .row, .row-cols-3;
+  @extend .list-group-horizontal-md, .row;
+  @include row-cols(2);
+
+  @include media-breakpoint-up(md) {
+    @include row-cols(3);
+  }
+
   margin-left: 0;
   padding-left: 0;
 
