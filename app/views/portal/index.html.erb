@@ -31,15 +31,15 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2><%= t('services') %></h2>
+        <h2><%= t('topics') %></h2>
         <ul class='services-grid'>
 
-          <% @services.each do |service| %>
+          <% @topics.each do |topic| %>
 
             <li class='service-box'>
               <div class="wrapper">
-                <h3><%= link_to service.name, service %></h3>
-                <p><%= service.description %></p>
+                <h3><%= link_to topic.name, topic %></h3>
+                <p><%= topic.description %></p>
               </div>
             </li>
 
