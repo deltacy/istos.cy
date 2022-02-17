@@ -8,24 +8,20 @@
   </div>
 </div>
 
-<div class="py-3 bg-white">
+<div class="py-4 bg-white">
   <div class="container">
-    <div class="row">
+    <div class="row mb-4">
       <div class="col">
-        <h2><%= t('services') %></h2>
-        <ul class='services-grid'>
-
+        <p><%= @services.count %> results </p>
+        <ul class='list-unstyled'>
           <% @services.each do |service| %>
-
-            <li class='service-box'>
+            <li>
               <div class="wrapper">
                 <h3><a href="#"><%= service.name %></a></h3>
                 <p><%= service.description %></p>
               </div>
             </li>
-
           <% end %>
-
         </ul>
       </div>
 
