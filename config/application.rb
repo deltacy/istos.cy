@@ -35,5 +35,6 @@ module Portal
     config.generators.system_tests = nil
     config.i18n.available_locales = %i[el en]
     config.i18n.default_locale = :el
+    config.active_job.queue_adapter = :sidekiq
   end
 end
