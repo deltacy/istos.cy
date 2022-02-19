@@ -51,5 +51,16 @@ RSpec.describe Service, type: :model do
         expect(described_class.results('child')).to contain_exactly(*services)
       end
     end
+
+    describe 'localised_results' do
+      it 'returns localised results if there is a match in any language' do
+        create(:service, locale: 'en', slug: 'register-birth', name: 'Register a birth')
+        create(:service, locale: 'el', slug: 'register-birth', name: 'Εγγραφή τέκνου')
+        create(:service, locale: 'en', slug: 'child-benefit', name: 'Child benefits')
+        child_benefit_el = create(:service, locale: 'el', slug: 'child-benefit', name: 'Επίδομα τέκνου')
+
+        expect(described_class.localised_results('child', 'el')).to contain_exactly(child_benefit_el)
+      end
+    end
   end
 end
