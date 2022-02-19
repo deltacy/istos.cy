@@ -1,44 +1,139 @@
+---
 name: CI
 
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 jobs:
-  test:
-    name: 'Tests'
+  bundle-audit:
     runs-on: ubuntu-latest
 
     services:
       postgres:
-        image: postgres:11.5
-        ports: ["5432:5432"]
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+        ports:
+          - 5432:5432
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7.5
-        bundler-cache: true
-      env:
-        BUNDLE_JOBS: 4
-        BUNDLE_RETRY: 3
+      - name: Setup Ruby 2.7.5
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.5
+          bundler-cache: true
 
-    - name: Setup test database
-      env:
-        DATABASE_URL: postgres://postgres:@localhost:5432/test
-        RAILS_ENV: test
-      run:
-        bundle exec rake db:create db:migrate
+      - name: Setup
+        uses: ./.github/actions/setup
 
-    - name: Run tests
-      env:
-        DATABASE_URL: postgres://postgres:@localhost:5432/test
-        RAILS_ENV: test
-      run: bundle exec rake spec
+      - name: Check bundle for known CVEs
+        run: |
+          bundle exec bundle-audit
+
+  brakeman:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby 2.7.5
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.5
+          bundler-cache: true
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Analyse code for vulnerabilities
+        run: bundle exec brakeman
+
+  rubocop:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby 2.7.5
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.5
+          bundler-cache: true
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Analyse code for formatting
+        run: bundle exec rubocop
+
+  spec:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby 2.7.5
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.5
+          bundler-cache: true
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Run specs
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
+          RAILS_ENV: test
+          SPEC_OPTS: "-f doc -P spec/**/*_spec.rb"
+        run: |
+          bundle exec rake spec
