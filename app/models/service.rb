@@ -10,9 +10,16 @@ class Service < ApplicationRecord
   scope :results, ->(term) { by_name(term).or(by_description(term)) }
   scope :localised_results, ->(term, locale) { Service.locale(locale).where(slug: results(term).pluck(:slug)) }
 
-  enum locale: { en: 'English',
-                 el: 'Greek' }
+  enum locale: {
+    en: 'English',
+    el: 'Greek'
+  }
 
+  enum availability: {
+    temporarily_unavailable: 0,
+    not_found: 1,
+    ok: 2
+  }
   def to_param
     slug
   end
