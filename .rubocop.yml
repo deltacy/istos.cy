@@ -17,3 +17,7 @@ Style/FrozenStringLiteralComment:
 
 Metrics/BlockLength:
   IgnoredMethods: ['describe', 'context']
+
+Layout/LineLength:
+  Exclude:
+    - 'db/seeds.rb'
