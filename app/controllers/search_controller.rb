@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
     @search_term = search_term
-    @services = search_term&.length > 1 ? Service.locale(I18n.locale).results(search_term) : []
+    @services = search_term&.length > 1 ? Service.localised_results(search_term, I18n.locale) : []
   end
 
   private
