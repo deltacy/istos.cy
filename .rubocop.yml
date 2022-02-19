@@ -1,11 +1,13 @@
 AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
   Exclude:
     - 'bin/*'
-    - 'db/schema.rb'
-    - 'config/puma.rb'
-    - 'spec/spec_helper.rb'
     - 'config/initializers/simple_form_bootstrap.rb'
-  NewCops: enable
+    - 'config/puma.rb'
+    - 'db/schema.rb'
+    - 'spec/spec_helper.rb'
+    - vendor/bundle/**/*
 
 Style/Documentation:
   Enabled: false
