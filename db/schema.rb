@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_19_022708) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_02_19_022708) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "unaccent"
@@ -20,15 +19,15 @@ ActiveRecord::Schema.define(version: 2022_02_19_022708) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "service_topics", force: :cascade do |t|
     t.bigint "service_id", null: false
     t.bigint "topic_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["service_id", "topic_id"], name: "index_service_topics_on_service_id_and_topic_id", unique: true
     t.index ["service_id"], name: "index_service_topics_on_service_id"
     t.index ["topic_id"], name: "index_service_topics_on_topic_id"
@@ -39,8 +38,8 @@ ActiveRecord::Schema.define(version: 2022_02_19_022708) do
     t.text "description"
     t.string "website", null: false
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "slug"
     t.text "information"
     t.integer "availability"
@@ -53,8 +52,8 @@ ActiveRecord::Schema.define(version: 2022_02_19_022708) do
     t.text "description"
     t.bigint "topic_id"
     t.string "locale", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["slug", "locale"], name: "index_topics_on_slug_and_locale", unique: true
     t.index ["topic_id"], name: "index_topics_on_topic_id"
   end
@@ -63,8 +62,8 @@ ActiveRecord::Schema.define(version: 2022_02_19_022708) do
     t.string "email"
     t.string "uid"
     t.string "provider"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "user_type"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
