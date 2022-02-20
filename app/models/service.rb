@@ -5,8 +5,8 @@ class Service < ApplicationRecord
   validates :name, :website, :locale, presence: true
 
   scope :locale, ->(locale) { where(locale: locale) }
-  scope :by_name, ->(term) { where('lower(name) like ?', "%#{term.downcase}%") }
-  scope :by_description, ->(term) { where('lower(description) like ?', "%#{term.downcase}%") }
+  scope :by_name, ->(term) { where('unaccent(name) ilike unaccent(?)', "%#{term}%") }
+  scope :by_description, ->(term) { where('description ilike unaccent(?)', "%#{term}%") }
   scope :results, ->(term) { by_name(term).or(by_description(term)) }
   scope :localised_results, ->(term, locale) { Service.locale(locale).where(slug: results(term).pluck(:slug)) }
 

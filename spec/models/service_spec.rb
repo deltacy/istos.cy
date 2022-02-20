@@ -26,6 +26,15 @@ RSpec.describe Service, type: :model do
 
         expect(described_class.by_name('ealt')).to contain_exactly(*services)
       end
+
+      it 'filters the services by name ignoring the accents' do
+        services = [create(:service, name: 'Επίδομα τεκνου'),
+                    create(:service, name: 'Επιδομα μητροτητας')]
+        create(:service, name: 'Health board')
+        create(:service, name: 'Another provider')
+
+        expect(described_class.by_name('επιδομα')).to contain_exactly(*services)
+      end
     end
 
     describe 'by_description' do
