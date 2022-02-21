@@ -1,6 +1,7 @@
 en:
   english: English
   greek: Greek
+  home: Home
   welcome: "Welcome to %{name}"
   intro: The place to find all Cyprus based web services and information.
   tagline: Simple, clear, fast.
