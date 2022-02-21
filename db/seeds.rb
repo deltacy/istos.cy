@@ -309,6 +309,22 @@ In the case of records of births after the expiry of three months from birth, as
       ",
       topics: ['registry']
     }
+  },
+  'covid-19': {
+    el: {
+      name: 'Κορωνοϊός (COVID-19)',
+      description: 'Πληροφορίες για τον κορωνοϊό',
+      website: 'http://staging.istos.cy/el/services/covid-19',
+      information: nil,
+      topics: []
+    },
+    en: {
+      name: 'Covid (covid-19)',
+      description: 'Data and insights on coronavirus',
+      website: 'http://staging.istos.cy/en/services/covid-19',
+      information: nil,
+      topics: []
+    }
   }
 }
 
