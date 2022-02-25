@@ -1,3 +1,5 @@
+<% content_for :page_title, "#{@topic.name} - ISTOS.CY"  %>
+
 <% add_parent_breadcrumb_link t('home'), root_path %>
 <% if @parent_topic %>
   <% add_parent_breadcrumb_link @parent_topic.name, topic_path(@parent_topic) %>
