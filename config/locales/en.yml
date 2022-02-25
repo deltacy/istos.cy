@@ -6,6 +6,7 @@ en:
   intro: The place to find all Cyprus based web services and information.
   tagline: Simple, clear, fast.
   footerline: A collaboration, making the internet a nicer place to be!
+  copyright_html: "Made by deltacy. A collaboration between %{extract_method} and %{digital_apps}"
 
   popular: Popular searches
   search: Search
