@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang=<%= I18n.locale %>>
   <head>
-    <title>ISTOS.CY</title>
+    <title><%= content_for?(:page_title) ? yield(:page_title) : "ISTOS.CY" %></title>
     <%= render partial: 'layouts/og' %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
