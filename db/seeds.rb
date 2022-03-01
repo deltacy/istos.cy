@@ -87,8 +87,8 @@ subtopic_data = {
   },
   'births-deaths-marriage': {
     registry: {
-      el: { name: 'Πιστοποιητικά, αλλαγή ονόματος ή φύλου.',
-            description: 'Έκδοση πιστοποιητικών γέννησης και γάμου, δήλωση θανάτου, αλλαγή ονόματος, αλλαγές σε επίσημα έγγραφα λόγω αλλαγής φύλου.' },
+      el: { name: 'Πιστοποιητικά, αλλαγή ονόματος ή φύλου',
+            description: 'Έκδοση πιστοποιητικών γέννησης και γάμου, δήλωση θανάτου, αλλαγή ονόματος, αλλαγές σε επίσημα έγγραφα λόγω αλλαγής φύλου' },
       en: { name: 'Certificates, changes of name or gender',
             description: 'Birth certificates, registering a birth, death or marriage and correcting certificates' }
     }
