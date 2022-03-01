@@ -29,7 +29,7 @@ en:
       destroy:
         success: You have signed our successfully
 
-  to_to_service: 'Go to service'
+  go_to_service: 'Go to service'
 
   create: Create
   edit: Update
