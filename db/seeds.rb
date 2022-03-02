@@ -3,60 +3,60 @@
 #
 topic_data = {
   benefits: {
-    el: { name: 'Επιδόματα', description: 'Επιδόματα και οικονομική υποστήριξη' },
-    en: { name: 'Benefits', description: 'Benefits and financial support' }
+    el: { name: 'Επιδόματα', description: 'Πληροφορίες για τα επιδόματα και οικονομική υποστήριξη' },
+    en: { name: 'Benefits', description: 'Information about benefits and financial support' }
   },
   'births-deaths-marriage': {
-    el: { name: 'Γεννήσεις, θανάτοι και γάμοι', description: 'Εγγραφές και έκδοσεις πιστοποιητικών' },
-    en: { name: 'Births, deaths and weddings', description: 'Registrations and issue certificates' }
+    el: { name: 'Γεννήσεις, θανάτοι και γάμοι', description: 'Πληροφορίες για εγγραφές και έκδοσεις πιστοποιητικών' },
+    en: { name: 'Births, deaths and weddings', description: 'Information about registrations and issue certificates' }
   },
   business: {
-    el: { name: 'Επιχειρήσεις και αυτοεργοδοτούμενα άτομα', description: 'Εργαλία και καθοδήγηση για επιχειρήσεις' },
-    en: { name: 'Businesses and self-employed', description: 'Tools for businesses' }
+    el: { name: 'Επιχειρήσεις και αυτοεργοδοτούμενα άτομα', description: 'Πληροφορίες για εργαλία και καθοδήγηση για επιχειρήσεις' },
+    en: { name: 'Businesses and self-employed', description: 'Information about tools for businesses' }
   },
   childcare: {
-    el: { name: 'Παιδική μέριμνα και φροντίδα', description: 'description' },
-    en: { name: 'Childcare', description: 'description' }
+    el: { name: 'Παιδική μέριμνα και φροντίδα', description: 'Πληροφορίες για την παιδική μέριμνα και φροντίδα' },
+    en: { name: 'Childcare', description: 'Information about childcare' }
   },
   government: {
     el: { name: 'Κυπριακή υπηκοότητα και ζωή στην Κύπρο', description: 'Πληροφορίες για την ζωή στην Κύπρο' },
     en: { name: 'Cypriot citizenship and life in Cyprus', description: 'Information about Cyprus' }
   },
   justice: {
-    el: { name: 'Δικαοσύνη και νομοθεσία', description: 'Νομοθεσία και δικαιοσύνη' },
-    en: { name: 'Justice and law', description: 'justice and law' }
+    el: { name: 'Δικαοσύνη και νομοθεσία', description: 'Πληροφορίες για την νομοθεσία και δικαιοσύνη' },
+    en: { name: 'Justice and law', description: 'Information about justice and law' }
   },
   disabled: {
-    el: { name: 'Άτομα με αναπηρίες', description: 'Περιλαμβάνει δικαιώματα, επιδόματα, φροντίδα' },
-    en: { name: 'People with disabilities', description: 'Includes rights of disabled people' }
+    el: { name: 'Άτομα με αναπηρίες', description: 'Πληροφορίες για τα δικαιώματα, επιδόματα, φροντίδα για άτομα με αναπηρίες' },
+    en: { name: 'Disabled people', description: 'Information about rights of disabled people' }
   },
   education: {
-    el: { name: 'Εκπαίδευση και μάθηση', description: 'Χορηγίες, υποτροφίες, πιστοποιήσεις' },
-    en: { name: 'Learning and education', description: 'Grants etc' }
+    el: { name: 'Εκπαίδευση', description: 'Πληροφορίες για την εκπαίδευση και μάθηση' },
+    en: { name: 'Education', description: 'Information about learning and education' }
   },
   transport: {
-    el: { name: 'Οδήγηση και μεταφορά', description: 'Περιλαμβάνει άδεια κυκλοφορίας, MOT, άδεια οδήγησης' },
-    en: { name: 'Driving and transport', description: 'Includes driving licence, MOT etc' }
+    el: { name: 'Οδήγηση και μεταφορά', description: 'Πληροφορίες για την άδεια κυκλοφορίας, MOT, άδεια οδήγησης' },
+    en: { name: 'Driving and transport', description: 'Information about driving licence, MOT etc' }
   },
   employment: {
-    el: { name: 'Εργοδότηση', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' },
-    en: { name: 'Employment', description: 'Includes salary information, rights, contracts and being fired' }
+    el: { name: 'Εργοδότηση', description: 'Πληροφορίες για μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' },
+    en: { name: 'Employment', description: 'Information about salary information, rights, contracts and being fired' }
   },
   environment: {
-    el: { name: 'Περιβάλλον ', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' },
-    en: { name: 'Environment ', description: 'Περιλαμβάνει μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' }
+    el: { name: 'Περιβάλλον ', description: 'Πληροφορίες για το περιβάλλον' },
+    en: { name: 'Environment ', description: 'Information about environment' }
   },
-  'housing-local-services': {
-    el: { name: 'Κατοικία και ενοικίαση', description: 'Υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών' },
-    en: { name: 'Hosting and rentals', description: 'Υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών' }
+  'land-and-property': {
+    el: { name: 'Γη και Κατοικία', description: 'Πληροφορίες για υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών' },
+    en: { name: 'Land and Property', description: 'Information about services for rent or sale house' }
   },
   'money-and-tax': {
-    el: { name: 'Εισόδημα και φορολογία', description: 'Περιλαμβάνει φορολογία, κοινωνικές ασφαλίσεις, χρέη' },
-    en: { name: 'Income and taxation', description: 'Περιλαμβάνει φορολογία, κοινωνικές ασφαλίσεις, χρέη' }
+    el: { name: 'Εισόδημα και φορολογία', description: 'Πληροφορίες για φορολογία, κοινωνικές ασφαλίσεις, χρέη' },
+    en: { name: 'Income and taxation', description: 'Information about income and taxation' }
   },
   grants: {
-    el: { name: 'Χορηγίες', description: 'Χορηγίες' },
-    en: { name: 'Grants', description: 'Grants' }
+    el: { name: 'Χορηγίες', description: 'Πληροφορίες για χορηγίες' },
+    en: { name: 'Grants', description: 'Information about grants' }
   }
 }
 
@@ -73,8 +73,8 @@ end
 subtopic_data = {
   transport: {
     'driving-licence': {
-      el: { name: 'Άδεια οδήγησης', description: 'Πολλες πληροφορίες' },
-      en: { name: 'Driving licence', description: 'Information related to driving licences' }
+      el: { name: 'Άδεια οδήγησης', description: 'Πληροφορίες για άδεια οδήγησης' },
+      en: { name: 'Driving licence', description: 'Information about driving licences' }
     }
   },
   benefits: {
