@@ -3,7 +3,7 @@
 #
 topic_data = {
   benefits: {
-    el: { name: 'Επιδόματα', description: 'Πληροφορίες για τα επιδόματα και οικονομική υποστήριξη' },
+    el: { name: 'Επιδόματα', description: 'Πληροφορίες για επιδόματα και οικονομική υποστήριξη' },
     en: { name: 'Benefits', description: 'Information about benefits and financial support' }
   },
   'births-deaths-marriage': {
@@ -11,7 +11,7 @@ topic_data = {
     en: { name: 'Births, deaths and weddings', description: 'Information about registrations and issue certificates' }
   },
   business: {
-    el: { name: 'Επιχειρήσεις και αυτοεργοδοτούμενα άτομα', description: 'Πληροφορίες για εργαλία και καθοδήγηση για επιχειρήσεις' },
+    el: { name: 'Επιχειρήσεις και αυτοεργοδοτούμενα άτομα', description: 'Πληροφορίες για εργαλεία και καθοδήγηση για επιχειρήσεις' },
     en: { name: 'Businesses and self-employed', description: 'Information about tools for businesses' }
   },
   childcare: {
@@ -28,11 +28,11 @@ topic_data = {
   },
   employment: {
     el: { name: 'Εργοδότηση', description: 'Πληροφορίες για μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' },
-    en: { name: 'Employment', description: 'Information about salary information, rights, contracts and being fired' }
+    en: { name: 'Employment', description: 'Information about salary, rights, contracts and being fired' }
   },
   environment: {
     el: { name: 'Περιβάλλον ', description: 'Πληροφορίες για το περιβάλλον' },
-    en: { name: 'Environment ', description: 'Information about environment' }
+    en: { name: 'Environment ', description: 'Information about the environment' }
   },
   grants: {
     el: { name: 'Χορηγίες', description: 'Πληροφορίες για χορηγίες' },
@@ -43,12 +43,12 @@ topic_data = {
     en: { name: 'Cypriot citizenship and life in Cyprus', description: 'Information about Cyprus' }
   },
   justice: {
-    el: { name: 'Δικαιοσύνη και νομοθεσία', description: 'Πληροφορίες για την νομοθεσία και δικαιοσύνη' },
+    el: { name: 'Δικαιοσύνη και νομοθεσία', description: 'Πληροφορίες για την δικαιοσύνη και την νομοθεσία' },
     en: { name: 'Justice and law', description: 'Information about justice and law' }
   },
   'land-and-property': {
-    el: { name: 'Γη και Κατοικία', description: 'Πληροφορίες για υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών' },
-    en: { name: 'Land and Property', description: 'Information about services for rent or sale house' }
+    el: { name: 'Γη και κατοικία', description: 'Πληροφορίες για υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών' },
+    en: { name: 'Land and property', description: 'Information about services related to house rentals and sales' }
   },
   'money-and-tax': {
     el: { name: 'Εισόδημα και φορολογία', description: 'Πληροφορίες για φορολογία, κοινωνικές ασφαλίσεις, χρέη' },
@@ -56,7 +56,7 @@ topic_data = {
   },
   transport: {
     el: { name: 'Οδήγηση και μεταφορά', description: 'Πληροφορίες για την άδεια κυκλοφορίας, MOT, άδεια οδήγησης' },
-    en: { name: 'Driving and transport', description: 'Information about driving licence, MOT etc' }
+    en: { name: 'Driving and transport', description: 'Information about road tax, MOT and driving licence' }
   }
 }
 
@@ -89,34 +89,34 @@ subtopic_data = {
   },
   disabled: {
     'services-and-social-benefits': {
-      el: { name: 'Σχέδια Κοινωνικών Παροχών', description: 'Σχέδια Κοινωνικών Παροχών' },
-      en: { name: 'Services and Social Benefit', description: 'Services and Social Benefit' }
+      el: { name: 'Σχέδια κοινωνικών παροχών', description: 'Σχέδια κοινωνικών παροχών' },
+      en: { name: 'Services and social benefit', description: 'Services and social benefit' }
     },
     'public-assistance': {
-      el: { name: 'Δημόσια Βοηθήματα Ηλικιωμένων και Αναπήρων', description: 'Δημόσια Βοηθήματα Ηλικιωμένων και Αναπήρων' },
-      en: { name: 'Public Assistance for Elderly and Disabled Persons', description: 'Public Assistance for Elderly and Disabled Persons' }
+      el: { name: 'Δημόσια βοηθήματα ηλικιωμένων και αναπήρων', description: 'Δημόσια βοηθήματα ηλικιωμένων και αναπήρων' },
+      en: { name: 'Public assistance for elderly and disabled people', description: 'Public assistance for elderly and disabled people' }
     },
     'special-education': {
-      el: { name: 'Ειδική Εκπαίδευση', description: 'Ειδική Εκπαίδευση' },
-      en: { name: 'Special Education', description: 'Special Education' }
+      el: { name: 'Ειδική εκπαίδευση', description: 'Ειδική εκπαίδευση' },
+      en: { name: 'Special education', description: 'Special education' }
     }
   },
   education: {
-    'pre-school': {
-      el: { name: 'Προσχολική Εκπαίδευση', description: 'Προσχολική Εκπαίδευση' },
-      en: { name: 'Pre-school Education', description: 'Pre-school Education' }
+    preschool: {
+      el: { name: 'Προσχολική εκπαίδευση', description: 'Προσχολική εκπαίδευση' },
+      en: { name: 'Preschool education', description: 'Preschool education' }
     },
     primary: {
-      el: { name: 'Δημοτική Εκπαίδευση', description: 'Δημοτική Εκπαίδευση' },
-      en: { name: 'Primary Education', description: 'Primary Education' }
+      el: { name: 'Δημοτική εκπαίδευση', description: 'Δημοτική εκπαίδευση' },
+      en: { name: 'Primary education', description: 'Primary education' }
     },
     secondary: {
-      el: { name: 'Μέση Γενική Εκπαίδευση', description: 'Μέση Γενική Εκπαίδευση' },
-      en: { name: 'Secondary Education', description: 'Secondary Education' }
+      el: { name: 'Μέση γενική εκπαίδευση', description: 'Μέση γενική εκπαίδευση' },
+      en: { name: 'Secondary education', description: 'Secondary education' }
     },
     higher: {
-      el: { name: 'Ανώτερη/Ανώτατη Εκπαίδευση', description: 'Ανώτερη/Ανώτατη Εκπαίδευση' },
-      en: { name: 'Higher Education', description: 'Higher Education' }
+      el: { name: 'Ανώτερη/Ανώτατη εκπαίδευση', description: 'Ανώτερη/Ανώτατη εκπαίδευση' },
+      en: { name: 'Higher education', description: 'Higher education' }
     },
     studying: {
       el: { name: 'Φοίτηση στην Κύπρο', description: 'Φοίτηση στην Κύπρο' },
@@ -125,12 +125,12 @@ subtopic_data = {
   },
   employment: {
     'losing-a-job': {
-      el: { name: 'Χωρίς Εργασία', description: 'Χωρίς Εργασία' },
-      en: { name: 'Losing a Job', description: 'Losing a Job' }
+      el: { name: 'Χωρίς εργασία', description: 'Χωρίς εργασία' },
+      en: { name: 'Losing a job', description: 'Losing a job' }
     },
     'finding-a-job': {
-      el: { name: 'Αναζήτηση Εργασίας', description: 'Αναζήτηση Εργασίας' },
-      en: { name: 'Finding a Job', description: 'Finding a Job' }
+      el: { name: 'Αναζήτηση εργασίας', description: 'Αναζήτηση εργασίας' },
+      en: { name: 'Finding a job', description: 'Finding a job' }
     },
     'eu-citizen-workers': {
       el: { name: 'Απασχόληση Ευρωπαίων Πολιτών', description: 'Απασχόληση Ευρωπαίων Πολιτών' },
@@ -140,9 +140,9 @@ subtopic_data = {
       el: { name: 'Διαδικτυακό σύστημα αναζήτησης εργασίας', description: 'Διαδικτυακό σύστημα αναζήτησης εργασίας' },
       en: { name: 'Online system for job search', description: 'Online system for job search' }
     },
-    'retired-persons': {
+    'retired-people': {
       el: { name: 'Συνταξιούχοι', description: 'Συνταξιούχοι' },
-      en: { name: 'Retired Persons', description: 'Retired Persons' }
+      en: { name: 'Retired people', description: 'Retired people' }
     }
   },
   'land-and-property': {
@@ -151,16 +151,16 @@ subtopic_data = {
       en: { name: 'Forms regarding immovable property', description: 'Forms regarding immovable property' }
     },
     'preserved-buildings': {
-      el: { name: 'Διατηρητέες Οικοδομές', description: 'Διατηρητέες Οικοδομές' },
-      en: { name: 'Preserved Buildings', description: 'Preserved Buildings' }
+      el: { name: 'Διατηρητέες οικοδομές', description: 'Διατηρητέες οικοδομές' },
+      en: { name: 'Preserved buildings', description: 'Preserved buildings' }
     },
     'transfer-of-property': {
-      el: { name: 'Μεταβίβαση Ακινήτου', description: 'Μεταβίβαση Ακινήτου' },
-      en: { name: 'Transfer of Property', description: 'Transfer of Property' }
+      el: { name: 'Μεταβίβαση ακινήτου', description: 'Μεταβίβαση ακινήτου' },
+      en: { name: 'Transfer of property', description: 'Transfer of property' }
     },
     'housing-schemes': {
-      el: { name: 'Στεγαστικά Σχέδια', description: 'Στεγαστικά Σχέδια' },
-      en: { name: 'Housing Schemes', description: 'Housing Schemes' }
+      el: { name: 'Στεγαστικά σχέδια', description: 'Στεγαστικά σχέδια' },
+      en: { name: 'Housing schemes', description: 'Housing schemes' }
     }
   },
   transport: {
