@@ -34,8 +34,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_19_022708) do
   end
 
   create_table "services", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "description"
+    t.string "name", null: false, collation: "latinlast"
+    t.text "description", collation: "latinlast"
     t.string "website", null: false
     t.string "locale", null: false
     t.datetime "created_at", null: false
@@ -48,8 +48,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_19_022708) do
 
   create_table "topics", force: :cascade do |t|
     t.string "slug"
-    t.string "name"
-    t.text "description"
+    t.string "name", null: false, collation: "latinlast"
+    t.text "description", collation: "latinlast"
     t.bigint "topic_id"
     t.string "locale", null: false
     t.datetime "created_at", null: false
