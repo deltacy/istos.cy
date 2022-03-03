@@ -8,7 +8,7 @@ require 'rspec/rails'
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 begin
-  ActiveRecord::Migration.maintain_test_schema!
+  ActiveRecord::Migration.check_pending!
 rescue ActiveRecord::PendingMigrationError => e
   puts e.to_s.strip
   exit 1
