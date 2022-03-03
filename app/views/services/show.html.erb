@@ -8,6 +8,15 @@
 
 <div class="container">
   <div class="row">
+    <% if @service.not_found? %>
+      <div class="alert alert-danger" role="alert">
+        <%= t('service.not_found') %>
+      </div>
+    <% elsif @service.temporarily_unavailable? %>
+      <div class="alert alert-warning" role="alert">
+        <%= t('service.temporarily_unavailable') %>
+      </div>
+    <% end %>
     <div class="col-md-8">
       <h1><%= @service.name %></h1>
       <p class="py-2">

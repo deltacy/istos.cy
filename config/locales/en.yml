@@ -16,6 +16,10 @@ en:
 
   login: Login
 
+  service:
+    not_found: This service was recently unavailable so you may be unable to access it
+    temporarily_unavailable: This service has recently experienced some connectivity issues, so you may be unable to access it
+
   support_interface:
     services:
       create:
