@@ -18,14 +18,6 @@ topic_data = {
     el: { name: 'Παιδική μέριμνα και φροντίδα', description: 'Πληροφορίες για την παιδική μέριμνα και φροντίδα' },
     en: { name: 'Childcare', description: 'Information about childcare' }
   },
-  government: {
-    el: { name: 'Κυπριακή υπηκοότητα και ζωή στην Κύπρο', description: 'Πληροφορίες για την ζωή στην Κύπρο' },
-    en: { name: 'Cypriot citizenship and life in Cyprus', description: 'Information about Cyprus' }
-  },
-  justice: {
-    el: { name: 'Δικαοσύνη και νομοθεσία', description: 'Πληροφορίες για την νομοθεσία και δικαιοσύνη' },
-    en: { name: 'Justice and law', description: 'Information about justice and law' }
-  },
   disabled: {
     el: { name: 'Άτομα με αναπηρίες', description: 'Πληροφορίες για τα δικαιώματα, επιδόματα, φροντίδα για άτομα με αναπηρίες' },
     en: { name: 'Disabled people', description: 'Information about rights of disabled people' }
@@ -33,10 +25,6 @@ topic_data = {
   education: {
     el: { name: 'Εκπαίδευση', description: 'Πληροφορίες για την εκπαίδευση και μάθηση' },
     en: { name: 'Education', description: 'Information about learning and education' }
-  },
-  transport: {
-    el: { name: 'Οδήγηση και μεταφορά', description: 'Πληροφορίες για την άδεια κυκλοφορίας, MOT, άδεια οδήγησης' },
-    en: { name: 'Driving and transport', description: 'Information about driving licence, MOT etc' }
   },
   employment: {
     el: { name: 'Εργοδότηση', description: 'Πληροφορίες για μισθούς, δικαιώματα, συμβόλαιο, απολύσεις' },
@@ -46,6 +34,18 @@ topic_data = {
     el: { name: 'Περιβάλλον ', description: 'Πληροφορίες για το περιβάλλον' },
     en: { name: 'Environment ', description: 'Information about environment' }
   },
+  grants: {
+    el: { name: 'Χορηγίες', description: 'Πληροφορίες για χορηγίες' },
+    en: { name: 'Grants', description: 'Information about grants' }
+  },
+  government: {
+    el: { name: 'Κυπριακή υπηκοότητα και ζωή στην Κύπρο', description: 'Πληροφορίες για την ζωή στην Κύπρο' },
+    en: { name: 'Cypriot citizenship and life in Cyprus', description: 'Information about Cyprus' }
+  },
+  justice: {
+    el: { name: 'Δικαοσύνη και νομοθεσία', description: 'Πληροφορίες για την νομοθεσία και δικαιοσύνη' },
+    en: { name: 'Justice and law', description: 'Information about justice and law' }
+  },
   'land-and-property': {
     el: { name: 'Γη και Κατοικία', description: 'Πληροφορίες για υπηρεσίες για ιδιοκτήτες και ενοικιαστές σπιτιών' },
     en: { name: 'Land and Property', description: 'Information about services for rent or sale house' }
@@ -54,9 +54,9 @@ topic_data = {
     el: { name: 'Εισόδημα και φορολογία', description: 'Πληροφορίες για φορολογία, κοινωνικές ασφαλίσεις, χρέη' },
     en: { name: 'Income and taxation', description: 'Information about income and taxation' }
   },
-  grants: {
-    el: { name: 'Χορηγίες', description: 'Πληροφορίες για χορηγίες' },
-    en: { name: 'Grants', description: 'Information about grants' }
+  transport: {
+    el: { name: 'Οδήγηση και μεταφορά', description: 'Πληροφορίες για την άδεια κυκλοφορίας, MOT, άδεια οδήγησης' },
+    en: { name: 'Driving and transport', description: 'Information about driving licence, MOT etc' }
   }
 }
 
@@ -71,12 +71,6 @@ end
 #
 
 subtopic_data = {
-  transport: {
-    'driving-licence': {
-      el: { name: 'Άδεια οδήγησης', description: 'Πληροφορίες για άδεια οδήγησης' },
-      en: { name: 'Driving licence', description: 'Information about driving licences' }
-    }
-  },
   benefits: {
     'help-for-families': {
       el: { name: 'Οικονομική υποστήριξη οικογενειών',
@@ -91,6 +85,12 @@ subtopic_data = {
             description: 'Έκδοση πιστοποιητικών γέννησης και γάμου, δήλωση θανάτου, αλλαγή ονόματος, αλλαγές σε επίσημα έγγραφα λόγω αλλαγής φύλου' },
       en: { name: 'Certificates, changes of name or gender',
             description: 'Birth certificates, registering a birth, death or marriage and correcting certificates' }
+    }
+  },
+  transport: {
+    'driving-licence': {
+      el: { name: 'Άδεια οδήγησης', description: 'Πληροφορίες για άδεια οδήγησης' },
+      en: { name: 'Driving licence', description: 'Information about driving licences' }
     }
   }
 }
