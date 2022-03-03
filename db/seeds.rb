@@ -87,6 +87,38 @@ subtopic_data = {
             description: 'Birth certificates, registering a birth, death or marriage and correcting certificates' }
     }
   },
+  business: {
+    'starting-a-business': {
+      el: { name: 'Ανοίγω νέα επιχείρηση', description: 'Ανοίγω νέα επιχείρηση' },
+      en: { name: 'Starting a business', description: 'Starting a business' }
+    },
+    'services-for-companies': {
+      el: { name: 'Υπηρεσίες για εταιρείες', description: 'Υπηρεσίες για εταιρείες' },
+      en: { name: 'Services for companies', description: 'Services for companies' }
+    },
+    vat: {
+      el: { name: 'Αιτήσεις ΦΠΑ', description: 'Αιτήσεις και έντυπα εγγραφής και ακύρωσης ΦΠΑ' },
+      en: { name: 'Applications of VAT', description: 'VAT applications and forms for registering and cancelling' }
+    }
+  },
+  childcare: {
+    child_adoption: {
+      el: { name: 'Υιοθεσία παιδιού', description: 'Υιοθεσία παιδιού' },
+      en: { name: 'Child adoption', description: 'Child adoption' }
+    },
+    foster_family: {
+      el: { name: 'Ανάδοχη οικογένεια', description: 'Ανάδοχη οικογένεια' },
+      en: { name: 'Foster family', description: 'Foster family' }
+    },
+    family_violence: {
+      el: { name: 'Βία στην οικογένεια', description: 'Βία στην οικογένεια' },
+      en: { name: 'Family violence', description: 'Family violence' }
+    },
+    support_line: {
+      el: { name: 'Γραμμή στήριξης παιδιών και εφήβων', description: 'Γραμμή στήριξης παιδιών και εφήβων' },
+      en: { name: 'Support line for children and teenagers', description: 'Support line for children and teenagers' }
+    }
+  },
   disabled: {
     'services-and-social-benefits': {
       el: { name: 'Σχέδια κοινωνικών παροχών', description: 'Σχέδια κοινωνικών παροχών' },
@@ -145,6 +177,54 @@ subtopic_data = {
       en: { name: 'Retired people', description: 'Retired people' }
     }
   },
+  environment: {
+    agrotourism: {
+      el: { name: 'Αγροτουρισμός', description: 'Αγροτουρισμός' },
+      en: { name: 'Agrotourism', description: 'Agrotourism' }
+    },
+    energy: {
+      el: { name: 'Ενέργεια', description: 'Ενέργεια' },
+      en: { name: 'Energy', description: 'Energy' }
+    }
+  },
+  grants: {
+    'agrotourism-grants': {
+      el: { name: 'Σχέδιο χορηγιών Αγροτουρισμού', description: 'Χρηματοδοτήσεις και επιχορηγήσεις για επιχειρήσεις αγροτουρισμού' },
+      en: { name: 'Agrotourism grants', description: 'Funding and grants for rural tourism businesses' }
+    },
+    'green-energy-grants': {
+      el: { name: 'Σχέδιο χορηγιών Ενέργειας', description: 'Χρηματοδοτήσεις και επιχορηγήσεις για ενέργειας' },
+      en: { name: 'Green energy grants', description: 'Funding and grants for green energy' }
+    }
+  },
+  government: {
+    'passport-and-id': {
+      el: { name: 'Διαβατήριο και ταυτότητα', description: 'Διαβατήριο και ταυτότητα' },
+      en: { name: 'Passport and identification documents', description: 'Passport and identification documents' }
+    },
+    'information-on-elections': {
+      el: { name: 'Εκλογές', description: 'Εκλογές και εκλογικά βιβλιάρια' },
+      en: { name: 'Elections', description: 'Information about elections and election registartion' }
+    },
+    naturalisation: {
+      el: { name: 'Πολιτογράφηση', description: 'Πολιτογράφηση' },
+      en: { name: 'Naturalisation', description: 'Naturalisation' }
+    },
+    'driving-licences': {
+      el: { name: 'Άδειες οδήγησης', description: 'Άδειες οδήγησης' },
+      en: { name: 'Driving licences', description: 'Driving licences' }
+    },
+    'patent-certificates': {
+      el: { name: 'Διπλώματα ευρεσιτεχνίας', description: 'Διπλώματα ευρεσιτεχνίας' },
+      en: { name: 'Patent certificates', description: 'Patent certificates' }
+    }
+  },
+  justice: {
+    'sexual-harassment': {
+      el: { name: 'Σεξουαλική παρενόχληση', description: 'Σεξουαλική παρενόχληση' },
+      en: { name: 'Sexual harassment', description: 'Sexual harassment' }
+    }
+  },
   'land-and-property': {
     'immovable-property': {
       el: { name: 'Έντυπα αναφορικά με ακίνητη περιουσία', description: 'Έντυπα αναφορικά με ακίνητη περιουσία' },
@@ -161,6 +241,12 @@ subtopic_data = {
     'housing-schemes': {
       el: { name: 'Στεγαστικά σχέδια', description: 'Στεγαστικά σχέδια' },
       en: { name: 'Housing schemes', description: 'Housing schemes' }
+    }
+  },
+  'money-and-tax': {
+    taxisnet: {
+      el: { name: 'Taxisnet', description: 'Taxisnet' },
+      en: { name: 'Taxisnet', description: 'Taxisnet' }
     }
   },
   transport: {
