@@ -87,6 +87,82 @@ subtopic_data = {
             description: 'Birth certificates, registering a birth, death or marriage and correcting certificates' }
     }
   },
+  disabled: {
+    'services-and-social-benefits': {
+      el: { name: 'Σχέδια Κοινωνικών Παροχών', description: 'Σχέδια Κοινωνικών Παροχών' },
+      en: { name: 'Services and Social Benefit', description: 'Services and Social Benefit' }
+    },
+    'public-assistance': {
+      el: { name: 'Δημόσια Βοηθήματα Ηλικιωμένων και Αναπήρων', description: 'Δημόσια Βοηθήματα Ηλικιωμένων και Αναπήρων' },
+      en: { name: 'Public Assistance for Elderly and Disabled Persons', description: 'Public Assistance for Elderly and Disabled Persons' }
+    },
+    'special-education': {
+      el: { name: 'Ειδική Εκπαίδευση', description: 'Ειδική Εκπαίδευση' },
+      en: { name: 'Special Education', description: 'Special Education' }
+    }
+  },
+  education: {
+    'pre-school': {
+      el: { name: 'Προσχολική Εκπαίδευση', description: 'Προσχολική Εκπαίδευση' },
+      en: { name: 'Pre-school Education', description: 'Pre-school Education' }
+    },
+    primary: {
+      el: { name: 'Δημοτική Εκπαίδευση', description: 'Δημοτική Εκπαίδευση' },
+      en: { name: 'Primary Education', description: 'Primary Education' }
+    },
+    secondary: {
+      el: { name: 'Μέση Γενική Εκπαίδευση', description: 'Μέση Γενική Εκπαίδευση' },
+      en: { name: 'Secondary Education', description: 'Secondary Education' }
+    },
+    higher: {
+      el: { name: 'Ανώτερη/Ανώτατη Εκπαίδευση', description: 'Ανώτερη/Ανώτατη Εκπαίδευση' },
+      en: { name: 'Higher Education', description: 'Higher Education' }
+    },
+    studying: {
+      el: { name: 'Φοίτηση στην Κύπρο', description: 'Φοίτηση στην Κύπρο' },
+      en: { name: 'Studying in Cyprus', description: 'Studying in Cyprus' }
+    }
+  },
+  employment: {
+    'losing-a-job': {
+      el: { name: 'Χωρίς Εργασία', description: 'Χωρίς Εργασία' },
+      en: { name: 'Losing a Job', description: 'Losing a Job' }
+    },
+    'finding-a-job': {
+      el: { name: 'Αναζήτηση Εργασίας', description: 'Αναζήτηση Εργασίας' },
+      en: { name: 'Finding a Job', description: 'Finding a Job' }
+    },
+    'eu-citizen-workers': {
+      el: { name: 'Απασχόληση Ευρωπαίων Πολιτών', description: 'Απασχόληση Ευρωπαίων Πολιτών' },
+      en: { name: 'European Union Citizen Workers', description: 'European Union Citizen Workers' }
+    },
+    'job-search': {
+      el: { name: 'Διαδικτυακό σύστημα αναζήτησης εργασίας', description: 'Διαδικτυακό σύστημα αναζήτησης εργασίας' },
+      en: { name: 'Online system for job search', description: 'Online system for job search' }
+    },
+    'retired-persons': {
+      el: { name: 'Συνταξιούχοι', description: 'Συνταξιούχοι' },
+      en: { name: 'Retired Persons', description: 'Retired Persons' }
+    }
+  },
+  'land-and-property': {
+    'immovable-property': {
+      el: { name: 'Έντυπα αναφορικά με ακίνητη περιουσία', description: 'Έντυπα αναφορικά με ακίνητη περιουσία' },
+      en: { name: 'Forms regarding immovable property', description: 'Forms regarding immovable property' }
+    },
+    'preserved-buildings': {
+      el: { name: 'Διατηρητέες Οικοδομές', description: 'Διατηρητέες Οικοδομές' },
+      en: { name: 'Preserved Buildings', description: 'Preserved Buildings' }
+    },
+    'transfer-of-property': {
+      el: { name: 'Μεταβίβαση Ακινήτου', description: 'Μεταβίβαση Ακινήτου' },
+      en: { name: 'Transfer of Property', description: 'Transfer of Property' }
+    },
+    'housing-schemes': {
+      el: { name: 'Στεγαστικά Σχέδια', description: 'Στεγαστικά Σχέδια' },
+      en: { name: 'Housing Schemes', description: 'Housing Schemes' }
+    }
+  },
   transport: {
     'driving-licence': {
       el: { name: 'Άδεια οδήγησης', description: 'Πληροφορίες για άδεια οδήγησης' },
