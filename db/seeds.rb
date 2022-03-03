@@ -43,7 +43,7 @@ topic_data = {
     en: { name: 'Cypriot citizenship and life in Cyprus', description: 'Information about Cyprus' }
   },
   justice: {
-    el: { name: 'Δικαοσύνη και νομοθεσία', description: 'Πληροφορίες για την νομοθεσία και δικαιοσύνη' },
+    el: { name: 'Δικαιοσύνη και νομοθεσία', description: 'Πληροφορίες για την νομοθεσία και δικαιοσύνη' },
     en: { name: 'Justice and law', description: 'Information about justice and law' }
   },
   'land-and-property': {
