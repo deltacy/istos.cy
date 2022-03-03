@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       resources :topics, only: :show, as: :subtopic, path: ''
     end
 
+    resource :status, only: [:show]
+
     namespace :support_interface, path: '/support' do
       root 'services#index'
 

@@ -10,7 +10,7 @@ class ServiceAvailability
 
   def check
     response = Net::HTTP.get_response(uri)
-    return service.not_found! if response.code == 404
+    return service.not_found! if [404, 500].include?(response.code.to_i)
 
     service.ok!
   rescue Net::OpenTimeout
