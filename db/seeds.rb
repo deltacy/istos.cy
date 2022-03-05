@@ -523,3 +523,17 @@ service_data.each_pair do |slug, data|
                     website: details[:website], information: details[:information], topic: topics.first)
   end
 end
+
+if Rails.env.development?
+  Identity.find_or_create_by!(email: 'admin@example.com') do |identity|
+    identity.name = 'Admin'
+    identity.password = 'password'
+    identity.password_confirmation = 'password'
+  end
+
+  User.find_or_create_by!(email: 'admin@example.com') do |user|
+    user.uid = 1
+    user.provider = 'identity'
+    user.user_type = 'support_user'
+  end
+end
