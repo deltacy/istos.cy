@@ -9,4 +9,8 @@ module ApplicationHelper
   def availability_status(availability)
     SERVICE_STATUS_CODE[availability.to_sym]
   end
+
+  def current_user
+    @current_user
+  end
 end
