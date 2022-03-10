@@ -29,20 +29,18 @@
     </header>
     <main role="main">
       <% if notice %>
-      <div class="alert alert-info">
-        <div class="container">
-          <%= notice %>
+        <div class="alert alert-info">
+          <div class="container">
+            <%= notice %>
+          </div>
         </div>
-      </div>
       <% end %>
       <div class="container py-5">
         <%= yield %>
       </div>
     </main>
     <footer class="text-muted">
-      <div class="container mb-4">
-
-      </div>
+      <div class="container mb-4"></div>
     </footer>
   </body>
 </html>
