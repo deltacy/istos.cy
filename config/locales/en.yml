@@ -34,6 +34,8 @@ en:
         activation_required: Get in touch to have your account activated
       destroy:
         success: You have signed our successfully
+      failure:
+        success: Authentication failed
 
   go_to_service: 'Go to service'
 

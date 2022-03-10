@@ -17,7 +17,7 @@ module SupportInterface
     end
 
     def failure
-      redirect_to new_support_interface_session_path, notice: 'Authentication failed'
+      redirect_to new_support_interface_session_path, notice: t('.success')
     end
 
     protected
