@@ -5,8 +5,8 @@ class ServiceForm
                 :name_en, :description_en, :website_en, :information_en,
                 :name_el, :description_el, :website_el, :information_el
 
-  validates :name_en, :description_en, :website_en, :information_en,
-            :name_el, :description_el, :website_el, :information_el, presence: true
+  validates :name_en, :description_en, :website_en,
+            :name_el, :description_el, :website_el, presence: true
 
   validate :uniqueness_of_slug, on: :new
 

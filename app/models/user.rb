@@ -6,4 +6,8 @@ class User < ApplicationRecord
            uid: auth['uid'],
            email: auth['info']['email'])
   end
+
+  def support_user?
+    user_type == 'support_user'
+  end
 end

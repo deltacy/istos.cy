@@ -476,14 +476,14 @@ In the case of records of births after the expiry of three months from birth, as
     el: {
       name: 'Κορωνοϊός (COVID-19)',
       description: 'Πληροφορίες για τον κορωνοϊό',
-      website: 'http://staging.istos.cy/el/services/covid-19',
+      website: 'https://www.pio.gov.cy/coronavirus/',
       information: nil,
       topics: []
     },
     en: {
       name: 'Covid (covid-19)',
       description: 'Data and insights on coronavirus',
-      website: 'http://staging.istos.cy/en/services/covid-19',
+      website: 'https://www.pio.gov.cy/coronavirus/eng',
       information: nil,
       topics: []
     }
@@ -521,5 +521,19 @@ service_data.each_pair do |slug, data|
     topics = topic_slugs.map { |topic_slug| Topic.find_by(slug: topic_slug, locale: locale) }
     Service.create!(locale: locale, slug: slug, name: details[:name], description: details[:description],
                     website: details[:website], information: details[:information], topic: topics.first)
+  end
+end
+
+if Rails.env.development?
+  Identity.find_or_create_by!(email: 'admin@example.com') do |identity|
+    identity.name = 'Admin'
+    identity.password = 'password'
+    identity.password_confirmation = 'password'
+  end
+
+  User.find_or_create_by!(email: 'admin@example.com') do |user|
+    user.uid = 1
+    user.provider = 'identity'
+    user.user_type = 'support_user'
   end
 end

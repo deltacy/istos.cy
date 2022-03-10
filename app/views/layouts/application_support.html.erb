@@ -13,29 +13,34 @@
   <body id='support'>
 
     <header>
-      <div class="navbar navbar-dark bg-secondary box-shadow">
+      <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container">
-          <%=link_to 'ISTOS.CY', support_interface_root_path, class: "navbar-brand" %>
+          <%= link_to support_interface_root_path, class: "navbar-brand" do %>
+            ISTOS.CY <small>admin</small>
+          <% end %>
+          <% if current_user&.support_user?  %>
+            <%= link_to root_path, class: "navbar-brand" do %>
+              ISTOS.CY <small>live</small>
+            <% end %>
+          <% end %>
           <%= render partial: 'layouts/change_locale' %>
         </div>
       </div>
     </header>
     <main role="main">
       <% if notice %>
-      <div class="alert alert-info">
-        <div class="container">
-          <%= notice %>
+        <div class="alert alert-info">
+          <div class="container">
+            <%= notice %>
+          </div>
         </div>
-      </div>
       <% end %>
       <div class="container py-5">
         <%= yield %>
       </div>
     </main>
     <footer class="text-muted">
-      <div class="container mb-4">
-
-      </div>
+      <div class="container mb-4"></div>
     </footer>
   </body>
 </html>
