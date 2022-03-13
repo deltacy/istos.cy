@@ -25,6 +25,19 @@
       <div class='py-4'>
         <%= link_to t('go_to_service'), service_path(@service, redirect: true), class: 'btn btn-lg btn-success' %>
       </div>
+      <% if @service.service_requirements %>
+        <h2 class='mt-2'><%= t('service.before_you_begin') %></h2>
+        <p><%= t('service.before_you_begin_info') %></p>
+        <% @service.service_requirements.each do |service_requirement| %>
+          <h3><%= service_requirement.requirement.name %></h3>
+          <p class="py-2">
+            <%= service_requirement.requirement.information %>
+          </p>
+          <div class='mb-4'>
+            <%= link_to t('go_to_service'), service_path(service_requirement.service, redirect: true) %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

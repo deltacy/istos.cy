@@ -487,6 +487,24 @@ In the case of records of births after the expiry of three months from birth, as
       information: nil,
       topics: []
     }
+  },
+  ariadni: {
+    el: {
+      name: 'Πρόσβαση στην διαδυκτιακή κυβερνητική πύλη (Αριάδνη)',
+      description: '',
+      website: 'https://cge.cyprus.gov.cy/cyloginregistration/register',
+      information: 'Το προφίλ στο CY Login παρέχει ασφαλή πρόσβαση στις προσωπικές σας πληροφορίες που είναι αποθηκευμένες σε κρατικά συστήματα.' \
+                   'Με αυτό μπορείτε να αποκτήσετε πρόσβαση σε διάφορες υπηρεσίες.',
+      topics: []
+    },
+    en: {
+      name: 'Login for government gateway portal (Ariadni)',
+      description: '',
+      website: 'https://cge.cyprus.gov.cy/cyloginregistration/register',
+      information: 'Your CY Login profile provides secure access to your personal information stored in government systems.' \
+                   'With this login you can gain access to a number of government services.',
+      topics: []
+    }
   }
 }
 
@@ -521,6 +539,21 @@ service_data.each_pair do |slug, data|
     topics = topic_slugs.map { |topic_slug| Topic.find_by(slug: topic_slug, locale: locale) }
     Service.create!(locale: locale, slug: slug, name: details[:name], description: details[:description],
                     website: details[:website], information: details[:information], topic: topics.first)
+  end
+end
+
+service_requirements = {
+  'child-benefit': ['ariadni']
+}
+
+service_requirements.each_pair do |slug, requirement_slugs|
+  services = Service.where(slug: slug)
+
+  requirement_slugs.each do |requirement_slug|
+    services.each do |service|
+      requirement_service = Service.find_by(slug: requirement_slug, locale: service.locale)
+      ServiceRequirement.create!(service: service, requirement: requirement_service)
+    end
   end
 end
 
