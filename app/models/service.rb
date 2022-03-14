@@ -1,6 +1,7 @@
 class Service < ApplicationRecord
   has_one :service_topic
   has_one :topic, through: :service_topic
+  has_many :service_requirements, dependent: :destroy
 
   validates :name, :website, :locale, presence: true
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_19_022708) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_12_190919) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "unaccent"
@@ -21,6 +21,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_19_022708) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "service_requirements", force: :cascade do |t|
+    t.bigint "service_id", null: false
+    t.integer "requirement_id", null: false
+    t.string "title", collation: "latinlast"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id", "requirement_id"], name: "index_service_requirements_on_service_id_and_requirement_id", unique: true
+    t.index ["service_id"], name: "index_service_requirements_on_service_id"
   end
 
   create_table "service_topics", force: :cascade do |t|
@@ -68,6 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_19_022708) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "service_requirements", "services"
   add_foreign_key "service_topics", "services"
   add_foreign_key "service_topics", "topics"
   add_foreign_key "topics", "topics"

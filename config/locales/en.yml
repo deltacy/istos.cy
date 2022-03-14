@@ -22,6 +22,8 @@ en:
   service:
     not_found: This service was recently unavailable so you may be unable to access it
     temporarily_unavailable: This service has recently experienced some connectivity issues, so you may be unable to access it
+    before_you_begin: Before you begin
+    before_you_begin_info: Before you begin you must have access to the services listed below.
 
   support_interface:
     services:
