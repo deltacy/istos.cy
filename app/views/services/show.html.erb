@@ -1,8 +1,8 @@
 <% content_for :page_title, "#{@service.name} - ISTOS.CY"  %>
 
 <% add_parent_breadcrumb_link t('home'), root_path %>
-<% add_parent_breadcrumb_link @service.topic.topic.name, topic_path(@service.topic.topic) %>
-<% add_parent_breadcrumb_link @service.topic.name, topic_path(@service.topic) %>
+<% add_parent_breadcrumb_link @service.topic.topic.name, topic_path(@service.topic.topic) if @service.topic&.topic&.name %>
+<% add_parent_breadcrumb_link @service.topic.name, topic_path(@service.topic) if @service.topic&.name %>
 
 <% content_for :title, @service.name %>
 
