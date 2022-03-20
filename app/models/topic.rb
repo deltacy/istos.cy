@@ -1,8 +1,8 @@
 class Topic < ApplicationRecord
   belongs_to :topic, optional: true
-  has_many :topics
+  has_many :topics, -> { order(:name) }
 
-  has_many :service_topics
+  has_many :service_topics, -> { order(:name) }
   has_many :services, through: :service_topics
 
   scope :locale, ->(locale) { where(locale: locale) }
