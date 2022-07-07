@@ -285,7 +285,7 @@ service_data = {
       description: 'Tax your vehicle.',
       website: 'https://www.jccsmart.com/change-culture/en-GB?returnUrl=%2Froad-transport-department%2F4888160%2F',
       information: "Visit the Road Transport Department's payment website and renew your Road Tax Licence using a " \
-                   ' credit card.',
+                   'credit card.',
       topics: ['driving-licence']
     }
   },
