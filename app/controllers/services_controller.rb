@@ -2,9 +2,10 @@ class ServicesController < ApplicationController
   def show
     @service = Service.locale(I18n.locale).find_by(slug: service_id)
 
-    return redirect_to @service.website, allow_other_host: true unless show_information_page?(@service)
-
-    render 'show'
+    respond_to do |format|
+      format.html { redirect_to @service.website, allow_other_host: true unless show_information_page?(@service) }
+      format.json { render json: @service }
+    end
   end
 
   private
